@@ -1,0 +1,26 @@
+Index: ../test/tests.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>nums = 0\r\na = []\r\nb = []\r\nwhile nums <= 1:\r\n    print(\"Список не должен быть единичным!\")\r\n    nums = int(input(\"Введите количество элементов: \"))\r\nelse:\r\n    print(\"Вводите числа по не убыванию!\")\r\n    a.append(int(input()))\r\n    while len(a) != nums:\r\n        num = int(input())\r\n        if a[-1] <= num:\r\n            a.append(num)\r\n        else:\r\n            print('Вы ввели число, меньшее предыдущего!')\r\n    print(len(set(a)))
+===================================================================
+diff --git a/../test/tests.py b/../test/tests.py
+--- a/../test/tests.py	
++++ b/../test/tests.py	
+@@ -1,16 +1,0 @@
+-nums = 0
+-a = []
+-b = []
+-while nums <= 1:
+-    print("Список не должен быть единичным!")
+-    nums = int(input("Введите количество элементов: "))
+-else:
+-    print("Вводите числа по не убыванию!")
+-    a.append(int(input()))
+-    while len(a) != nums:
+-        num = int(input())
+-        if a[-1] <= num:
+-            a.append(num)
+-        else:
+-            print('Вы ввели число, меньшее предыдущего!')
+-    print(len(set(a)))
+\ No newline at end of file
