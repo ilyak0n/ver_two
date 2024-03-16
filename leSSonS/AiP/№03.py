@@ -8,3 +8,5 @@ while True:
 mn = set(sorted(listik))
 a = list(mn)
 print(a[-2])
+
+print('\no(n)')

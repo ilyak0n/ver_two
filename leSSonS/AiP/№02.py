@@ -6,3 +6,5 @@ while True:
     else:
         print(count)
         break
+
+print('\no(1)')

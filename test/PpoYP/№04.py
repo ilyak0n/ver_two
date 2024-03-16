@@ -20,17 +20,20 @@ def sred(a: list):
         count += 1
     return x/count
 
-a = [0]*10
-for i in range(10):
-    a[i] = [random.randrange(-10,11)  for j in range(6)]
-
 def preobr(a: list) -> list:
     b = []
     for i in range(len(a)):
         b.append('{:.2f}'.format(maxx(a[i]) - sred(a[i])))
     return b
 
-print(f"A = {a}")
-print(f'B = {preobr(a)}')
+a = [0]*10
+for i in range(10):
+    a[i] = [random.randrange(-10,11)  for j in range(6)]
+
+for i in range(len(a)):
+    for j in range(len(a[i])):
+        print(a[i][j], end=" ")
+    print('')
+print(f'\nB = {preobr(a)}')
 
 print("Задание выполнил студент Конушкин Илья группы 2023-ФГиИБ-ПИ-1б ")

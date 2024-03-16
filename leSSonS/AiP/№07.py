@@ -14,3 +14,5 @@ else:
         else:
             print('Вы ввели число, меньшее предыдущего!')
     print(len(set(a)))
+
+print('\n0(1)')

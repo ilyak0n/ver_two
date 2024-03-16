@@ -14,3 +14,5 @@ for i in range(1,len(spisok)):
         k = count
         count = 1
 print(max(count,k))
+
+print('o(n)')
