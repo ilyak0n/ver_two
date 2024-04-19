@@ -9,6 +9,7 @@ x = -5
 a = 5
 h = 0.02
 
+print("x \t\t y")
 while x <= a:
     y = (3*x**3  + 2*x**2 + 4*x - 5)/((x**2 - 9) * (x+2) * (x-1))
     print('{:.3f}'.format(x),'{:.3f}'.format(y))

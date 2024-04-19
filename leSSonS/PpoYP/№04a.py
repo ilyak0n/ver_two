@@ -4,33 +4,24 @@
 значением столбца двумерного массива A.
 '''
 import random
-def maxx(a: list) -> int:
-    m = 0
-    for i in range(1,len(a)):
-        if a[i] > a[i-1] and a[i] > m:
-            m = a[i]
-        elif a[i-1] > a[i] and a[i-1] > m:
-            m = a[i-1]
-    return m
-def sred(a: list):
-    x = 0
-    count = 0
-    for i in range(len(a)):
-        x += a[i]
-        count += 1
-    return x/count
 
 a = [0]*10
 for i in range(10):
     a[i] = [random.randrange(-10,11)  for j in range(6)]
 
-def preobr(a: list) -> list:
-    b = []
-    for i in range(len(a)):
-        b.append('{:.2f}'.format(maxx(a[i]) - sred(a[i])))
-    return b
+b = []
+for i in range(len(a)):
+    sr = 0
+    summ = 0
+    count = 0
+    for j in range(len(a[i])):
+        summ += a[i][j]
+        count += 1
+    b.append('{:.2f}'.format((max(a[i])) - (summ/count)))
 
-print(f"A = {a}")
-print(f'B = {preobr(a)}')
+print("A =", end="")
+for i in range(len(a)):
+    print(f"\t{a[i]}")
+print(f"B = {b}")
 
 print("Задание выполнил студент Конушкин Илья группы 2023-ФГиИБ-ПИ-1б ")

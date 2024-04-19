@@ -1,9 +1,14 @@
 count = int(input())
 a = []
-while len(a) != count:
+len_a = 0
+c = 3 # присваивание х3
+while len_a != count:
     a.append(input())
-for i in range(1,len(a),2):
-    a[i], a[i-1] = a[i-1], a[i]
+    len_a += 1
+    c += 3 # цикл + добавление + присваивание
+for i in range(1, len(a), 2):
+    a[i], a[i - 1] = a[i - 1], a[i]
+    c += 3 # итерация + присваивание
 print(a)
 
-print('\no(n)')
+print(f'кол-во операций: {c}')

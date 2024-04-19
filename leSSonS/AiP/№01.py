@@ -1,7 +1,11 @@
 n = int(input())
+с = 1  # присваивание
 for i in range(n):
-    a = i**2
-    if a<n and a!=0:
-        print(i**2)
+    с += 1  # итерация
+    a = i ** 2
+    с += 1  # присваивание
+    if a <= n and a != 0:
+        print(i ** 2)
+    с += 2  # два условия
 
-print('\no(n)')
+print(f'\nкол-во операций: {с}')
