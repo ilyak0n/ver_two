@@ -3,15 +3,15 @@
 
 nums = int(input("Введите количество элементов: "))
 mass = []
-c = 0
+c = 3
 while len(mass) != nums:
     print(f"Введите через пробел ровно {nums} элементов!")
     mass = input().split()
-    c += 1
+    c += 2
 new = [x for x in mass if mass.count(x) == 1]
-c += 3 * nums
+c += 4 * nums
 for i in range(len(new)):
-    c += 1
+    c += 2
     print(new[i], end=' ')
 
-print(f'кол-во операций: {c}')
+print(f'\nкол-во операций: {c}')

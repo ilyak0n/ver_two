@@ -8,7 +8,7 @@ while len_a != count:
     a.append(input())
     len_a += 1
     c += 3 # цикл + добавление + присваивание
-for i in range(1, len(a), 2):
+for i in range(1, len_a, 2):
     a[i], a[i - 1] = a[i - 1], a[i]
     c += 3 # итерация + присваивание
 print(a)

@@ -18,7 +18,7 @@ new_sp = []
 len_new_sp = 0
 c += 2  # присваивание х2
 for i in range(1, len_spisok - 1):
-    c += 3  # итерация + два условия
+    c += 4  # итерация + два условия
     if spisok[i] > spisok[i - 1] and spisok[i] > spisok[i + 1]:
         new_sp.append(i)
         len_new_sp += 1
