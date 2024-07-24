@@ -30,7 +30,7 @@ class Function:
                 print('{:.3f}'.format(self.x_0), "\t", '{:.3f}'.format(y))
             self.x_0 += self.h
 
-myFunction = Function(-10, 10, 0.05)
+myFunction = Function(float(input('Введите начальное значение: ')), float(input('Введите конечное значение: ')), float(input('Введите высоту: ')))
 myFunction.iteration()
 
 print("\nЗадание выполнил студент Конушкин Илья группы 2023-ФГиИБ-ПИ-1б ")
